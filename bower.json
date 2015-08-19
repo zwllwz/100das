@@ -1,0 +1,24 @@
+{
+  "name": "testApp",
+  "version": "0.0.0",
+  "authors": [
+    "Lara Zhu <lara.zhu@gm.com>"
+  ],
+  "description": "simple app for using angular and node js",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "homepage": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.3",
+    "angular-ui-router": "~0.2.15"
+  }
+}
