@@ -5,9 +5,15 @@
     <script src="../vendor/angular/angular.js"></script>
     <script src="../vendor/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="app.js"></script>
+
+    <script src="home/home.js"></script>
+    <script src="home/homeCtrl.js"></script>
+    <script src="item/item.js"></script>
+    <script src="item/itemCtrl.js"></script>
   </head>
   <body ng-controller='MainCtrl'>
     <p>Hello {{name}} !</p>
-    
+    <div ui-view></div>    
+    <a ui-sref="item">item links</a>
   </body>
 </html>
