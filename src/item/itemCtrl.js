@@ -1,4 +1,4 @@
 angular.module('100das.item')
 .controller('ItemCtrl', ['$scope', function ($scope) {
-  $scope.item = 'UKGUIH';
+  $scope.items = ['item1', 'item2', 'item3'];
 }]);
