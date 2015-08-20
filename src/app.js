@@ -3,7 +3,8 @@
 angular.module('100das', [
   'ui.router',
   '100das.home',
-  '100das.item'
+  '100das.item',
+  '100das.about'
   ])
 .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise("/home");
@@ -22,6 +23,11 @@ angular.module('100das', [
       url: '/item',
       templateUrl: 'item/item.html',
       controller: 'ItemCtrl'
+    })
+    .state('about', {
+      url:'/about',
+      templateUrl:'about/about.html',
+      controller: 'AboutCtrl'
     });
 }])
 .controller('MainCtrl', ['$scope', function ($scope) {
