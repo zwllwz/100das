@@ -22,6 +22,17 @@
     <link rel="stylesheet" type="text/css" href="item/item.css">
   </head>
   <body ng-controller='MainCtrl'>
+
+    <div>
+      <ul class='top-navbar'>
+        <li><a ui-sref='home'>home</a></li>
+        <li><a ui-sref='item'>shop</a></li>
+        <li><a ui-sref='about'>about</a></li>
+        <li><a ui-sref='#'>story</a></li>
+        <li><a ui-sref='#'>others</a></li>
+      </ul>
+    </div>
+
     <div ui-view></div>    
   </body>
 </html>
