@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html lang="en" ng-app="100das">
-  <head>
+    <head>
     <title>100das.net</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -16,23 +16,37 @@
     <script src="item/itemCtrl.js"></script>
     <script src="about/about.js"></script>
     <script src="about/aboutCtrl.js"></script>
+
     <link rel="icon" type="image/png" href="../assets/images/lemongrab.jpg" />
-    <link rel="stylesheet" type="text/css" href="../vendor/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="home/home.css">
-    <link rel="stylesheet" type="text/css" href="item/item.css">
-  </head>
-  <body ng-controller='MainCtrl'>
+    <link rel="stylesheet" type="text/css" href="../vendor/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="style/app.css" />
+    <link rel="stylesheet" type="text/css" href="home/home.css" />
+    <link rel="stylesheet" type="text/css" href="item/item.css" />
+    </head>
+    <body ng-controller='MainCtrl'>
+        <ul class='top-navbar'>
+            <li class='top-tab'><a ui-sref='home'>home</a></li>
+            <li class='top-tab'><a ui-sref='item'>shop</a></li>
+            <li class='top-tab'><a ui-sref='about'>about</a></li>
+            <li class='top-tab'><a ui-sref='#'>story</a></li>
+            <li class='top-tab'><a ui-sref='#'>others</a></li>
+        </ul>
 
-    <div>
-      <ul class='top-navbar'>
-        <li><a ui-sref='home'>home</a></li>
-        <li><a ui-sref='item'>shop</a></li>
-        <li><a ui-sref='about'>about</a></li>
-        <li><a ui-sref='#'>story</a></li>
-        <li><a ui-sref='#'>others</a></li>
-      </ul>
-    </div>
+        <input type='checkbox' id='nav-trigger' class='nav-trigger' />
+        <label for='nav-trigger'></label>
 
-    <div ui-view></div>    
+
+        <div class="site-wrap" ui-view></div>    
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
