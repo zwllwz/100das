@@ -4,7 +4,8 @@ angular.module('100das', [
   'ui.router',
   '100das.home',
   '100das.item',
-  '100das.about'
+  '100das.about',
+  '100das.category'
   ])
 .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise("/home");
@@ -19,7 +20,12 @@ angular.module('100das', [
       templateUrl: 'home/home.html',
       controller: 'HomeCtrl'
     })
-    .state('item', {
+    .state('category', {
+      url: '/category',
+      templateUrl: 'category/category.html',
+      controller: 'CategoryCtrl'
+    })
+    .state('tab.category.item', {
       url: '/item',
       templateUrl: 'item/item.html',
       controller: 'ItemCtrl'
