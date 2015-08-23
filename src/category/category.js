@@ -1,1 +1,4 @@
-angular.module('100das.category', []);
+angular.module('100das.category', [])
+.config(['$stateProvider', function ($stateProvider) {
+  
+}]);

@@ -10,11 +10,6 @@ angular.module('100das', [
 .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise("/home");
   $stateProvider
-    .state('welcome', {
-      url: '/index',
-      templateUrl: 'index.html',
-      contrller: 'MainCtrl'
-    })
     .state('home', {
       url: '/home',
       templateUrl: 'home/home.html',
@@ -25,8 +20,8 @@ angular.module('100das', [
       templateUrl: 'category/category.html',
       controller: 'CategoryCtrl'
     })
-    .state('tab.category.item', {
-      url: '/item',
+    .state('category.itemList', {
+      url: '/itemList',
       templateUrl: 'item/item.html',
       controller: 'ItemCtrl'
     })
@@ -36,7 +31,7 @@ angular.module('100das', [
       controller: 'AboutCtrl'
     });
 }])
-.controller('MainCtrl', ['$scope', function ($scope) {
+.controller('MainCtrl', ['$scope', '$state', function ($scope, $state) {
   $scope.name = 'world';
 
 }]);

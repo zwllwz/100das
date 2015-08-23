@@ -1,11 +1,13 @@
+<div>category</div>
 <div class='container'>
   <div clas='row'>
-  <div class='col-lg-3 col-xs-6' ng-repeat="item in items" >
-    <img width="300" height="300" src="https://100das.org/wp-content/uploads/2015/06/candybook1-300x300.jpg" class="attachment-shop_catalog wp-post-image" alt="candybook1">
-    <a class="item-img" id="item1">no image for this item</a>
-    <div>title</div>
-    <div>description</div>
-    <div>price</div>
+  <div class='col-lg-3 col-xs-6' ng-repeat="category in categories" >
+    <img src="https://dn-100das.qbox.me/wp-content/uploads/2015/05/83-300x300.jpg" alt="收藏 · 境" width="300" height="300">
+    <a ui-sref='.itemList'>no image for this item</a>
+    <div>{{categories[$index]}}</div>
+    <div>name</div>
   </div>
   </div>
 </div>
+
+<div ng-view></div>
