@@ -2,12 +2,19 @@
 
 angular.module('100das', [
   'ui.router',
+  '100das.header',
   '100das.home',
   '100das.item',
   '100das.about',
   '100das.category'
   ])
 .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
+  var tab = {
+    name: 'tab',
+    url: '/tab',
+    templateUrl: 'header/header.html',
+    controller: 'HeaderCtrl'
+  }
   var home = {
     name: 'home',
     url: '/home',
@@ -40,8 +47,9 @@ angular.module('100das', [
     templateUrl: 'item/itemDetail.html',
     controller: 'ItemDetailCtrl'
   }
-  $urlRouterProvider.otherwise("/home");
+  $urlRouterProvider.otherwise('/tab');
   $stateProvider
+    .state(tab)
     .state(home)
     .state(category)
     .state(itemList)
