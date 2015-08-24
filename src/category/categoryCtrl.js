@@ -3,5 +3,5 @@ angular.module('100das.category')
   $scope.categories = ['category1', 'category2', 'category3', 'category4'];
   $scope.getItems = function () {
   	$state.go('itemList');
-  }
+  };
 }]);
