@@ -16,19 +16,19 @@ angular.module('100das', [
     controller: 'HeaderCtrl'
   }
   var home = {
-    name: 'home',
+    name: 'tab.home',
     url: '/home',
     templateUrl: 'home/home.html',
     controller: 'HomeCtrl'
   }
   var category = {
-    name: 'category',
+    name: 'tab.category',
     url: '/category',
     templateUrl: 'category/category.html',
     controller: 'CategoryCtrl'
   }
   var about = {
-    name: 'about',
+    name: 'tab.about',
     url:'/about',
     templateUrl:'about/about.html',
     controller: 'AboutCtrl'
