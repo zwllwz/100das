@@ -15,6 +15,19 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
+        // since karma will autoload all sibling node modules starting with 'karma-'. 
+        // This means if karma is installed in the node_modules directory, all other modules starting with 'karma-' will be autoloadedd for us.
+        // And mocha is feched as the 'karma-mocha' node module. 
+        // So nod need to manually load it ourselves. 
+        // all test related libraries
+        'node_modules/chai/chai.js',
+        'vendor/angular/angular.js',
+        'vendor/angular-ui-router/release/angular-ui-router.js',
+        'vendor/angular-mocks/angular-mocks.js',
+        // our source code to test
+        'src/**/*.js',
+        // the tests themselves
+        'test/**/*.js'
     ],
 
 
