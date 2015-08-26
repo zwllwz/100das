@@ -10,7 +10,7 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['mocha'],
+    frameworks: ['mocha', 'chai'],
 
 
     // list of files / patterns to load in the browser
@@ -20,10 +20,9 @@ module.exports = function(config) {
         // And mocha is feched as the 'karma-mocha' node module. 
         // So nod need to manually load it ourselves. 
         // all test related libraries
-        'node_modules/chai/chai.js',
         'vendor/angular/angular.js',
-        'vendor/angular-ui-router/release/angular-ui-router.js',
         'vendor/angular-mocks/angular-mocks.js',
+        'vendor/angular-ui-router/release/angular-ui-router.js',
         // our source code to test
         'src/**/*.js',
         // the tests themselves

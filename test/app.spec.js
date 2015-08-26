@@ -1,17 +1,17 @@
 'use strict'
 
-describe.only('about controller', function () {
+describe('app.js', function () {
   var ctrl,
     $scope,
     $rootScope;
 
   beforeEach(function () {
-    module('100das.about');
+    module('100das');
   });
 
   beforeEach(function () {
     inject(function ($injector) {
-      $scope = $injector.get('$rootScope').$new();
+      $scope = $injector.get('$scope');
       $rootScope = $injector.get('$rootScope');
     });
   });
@@ -19,10 +19,4 @@ describe.only('about controller', function () {
   it('test', function () {
     true.should.be.true;
   });
-
-  function createController() {
-    ctrl = $controller('AboutCtrl', {
-      $scope: $scope
-    });
-  }
 });

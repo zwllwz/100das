@@ -20,7 +20,8 @@
     "karma-chrome-launcher": "^0.1.7",
     "karma-mocha": "^0.1.10",
     "mocha": "^2.2.0",
-    "karma-cli": "^0.1.0"
+    "karma-cli": "^0.1.0",
+    "karma-chai": "^0.1.0"
   },
   "dependencies": {
     "bower": "^1.4.1"

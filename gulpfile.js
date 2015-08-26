@@ -38,7 +38,7 @@ gulp.task('watch', function () {
 
 // run once 
 gulp.task('test', function () {
-  return gulp.src(testFiles)
+  return gulp.src('./dontexist')
       .pipe(karma({
         configFile: 'karma.conf.js',
         action: 'run'
@@ -48,9 +48,9 @@ gulp.task('test', function () {
       });
 });
 
-// keep run
+// keep run watch changes 
 gulp.task('default', function() {
-  gulp.src(testFiles)
+  gulp.src('./dontexist')
       .pipe(karma({
         configFile: 'karma.conf.js',
         action: 'watch'
