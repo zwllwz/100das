@@ -21,7 +21,9 @@
     "karma-mocha": "^0.1.10",
     "mocha": "^2.2.0",
     "karma-cli": "^0.1.0",
-    "karma-chai": "^0.1.0"
+    "karma-chai": "^0.1.0",
+    "body-parser": "^1.13.3",
+    "express": "^4.13.3"
   },
   "dependencies": {
     "bower": "^1.4.1"
