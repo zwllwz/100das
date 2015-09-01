@@ -1,10 +1,7 @@
 {
   "name": "testApp",
   "version": "0.0.0",
-  "description": "simple app for using nodejs and angularjs",
-  "scripts": {
-    "start": "http-server -a 0.0.0.0 -p 8000"
-  },
+  "description": "simple app for using nodejs and reactjs",
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-jshint": "^1.11.2",
@@ -26,6 +23,11 @@
     "express": "^4.13.3"
   },
   "dependencies": {
-    "bower": "^1.4.1"
+    "bower": "^1.4.1",
+    "react-tools": "^0.13.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/zwllwz/100das.git"
   }
 }
