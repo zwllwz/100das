@@ -1,105 +1,65 @@
+var dataJson = [
+  {author: "Pete Hunt", text: "This is one comment"},
+  {author: "Jordan Walke", text: "This is *another* comment"}
+];
 
-// import React from 'react';
-// import ReactRouter, { Route, RouteHandler, Link } from 'react-router';
 
-// For now, keep React & ReactRouter serving from CDNJS.
-var { DefaultRoute, Route, RouteHandler, Link } = ReactRouter;
-
-import { ProductWall } from './product_wall.js'
-import { AppHeader } from './app_header.js'
-import { ProductMain } from './product.js'
-
-var App = React.createClass({
+var CommentBox = React.createClass({
   render: function () {
     return (
-      <div className="app">
-        <AppHeader/>
-        <RouteHandler/>
-        <AppFooter/>
+      <div className="CommentBox">
+        <h1>CommentBox</h1>
+        <CommentList data={this.props.data}></CommentList>
+        <CommentForm></CommentForm>
       </div>
     );
   }
 });
 
-var AppFooter = React.createClass({
+var CommentList = React.createClass({
   render: function () {
-    // No footer for now.
-    return false;
-  }
-});
+    var commentNodes = this.props.data.map(function (comment) {
+      return (
+        <Comment author={comment.author}>
+          {comment.text}
+        </Comment>
+      );
+    });
 
-var SignedIn = React.createClass({
-  render: function () {
     return (
-      <div>
-        <h2>Signed In</h2>
-        <RouteHandler/>
+      <div className="commentList">
+        {commentNodes}
       </div>
     );
   }
 });
 
-var Home = React.createClass({
+var CommentForm = React.createClass({
   render: function () {
     return (
-      <div className="home">
-        <div className="homeBanner">
-        </div>
-        <div className="homeMainContainer">
-          <ProductWall num_columns="3"/>
-        </div>
+      <div className="commentForm">
+      CommentForm
       </div>
     );
   }
 });
 
-var SignedOut = React.createClass({
+
+var Comment = React.createClass({
   render: function () {
     return (
-      <div>
-        <h2>Signed Out</h2>
-        <RouteHandler/>
+      <div className="comment">
+        <h2 className="commentAuthor">
+          {this.props.author}
+        </h2>
+        {this.props.children}
       </div>
     );
   }
 });
 
-var SignIn = React.createClass({
-  componentDidMount: function () {
-    console.log('SignIn DidMount');
-  },
-  componentWillUnmount: function () {
-    console.log('SignIn componentWillUnmount');
-  },
-  render: function () {
-    return (
-      <h3>Please sign in.</h3>
-    );
-  }
-});
 
-var ForgotPassword = React.createClass({
-  render: function () {
-    return (
-      <h3>Forgot your password?</h3>
-    );
-  }
-});
-
-// Routes for this app.
-var routes = (
-  <Route handler={App}>
-    <DefaultRoute handler={Home}/>
-
-    <Route handler={SignedOut}>
-      <Route name="signin" handler={SignIn}/>
-      <Route name="forgot-password" handler={ForgotPassword}/>
-    </Route>
-    <Route name="home" handler={Home}/>
-    <Route name="products" path="products/:product_id" handler={ProductMain}/>
-  </Route>
+React.render(
+  <CommentBox data={dataJson}/>,
+  document.getElementById('content')
 );
-
-ReactRouter.run(routes, ReactRouter.HistoryLocation, function (Handler) {
-  React.render(<Handler/>, document.getElementById('content'));
-});

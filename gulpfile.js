@@ -91,9 +91,14 @@ gulp.task('clean', function () {
         .pipe(clean());
 });
 
+gulp.task('json', function () {
+  gulp.src('src/json/**/*.json')
+    .pipe(gulp.dest('dist/json'));
+});
 
 
-gulp.task('build', ['html', 'css', 'js']);
+
+gulp.task('build', ['html', 'css', 'js', 'json']);
 
 gulp.task('package', ['html', 'css', 'js-production']);
 
